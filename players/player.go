@@ -1,10 +1,12 @@
 package player
 
-import "fmt"
-
 type Player struct {
 }
 
-func Init() {
-	fmt.Println("vim-go")
+func Init(s Stat) Player {
+	return Player{}
+}
+
+func AssignAction(playerID, action string) error {
+	return nil
 }
