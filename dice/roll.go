@@ -9,10 +9,14 @@ import (
 )
 
 func Roll(roll string) (res int, err error) {
+	if roll == "" {
+		err = fmt.Errorf("no roll provided")
+		return
+	}
 	r := regexp.MustCompile("d?(4|6|12|20)")
 	number := r.FindStringSubmatch(roll)
 	if len(number) == 0 {
-		err = fmt.Errorf("Unknown die size of %v", roll)
+		err = fmt.Errorf("unknown die size of %v", roll)
 		return
 	}
 	s, err := strconv.Atoi(number[1])
