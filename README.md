@@ -28,10 +28,14 @@ $ gm
 
 ## Goals
 
-[ ] Create monster template
-[ ] Create player templates
-[ ] Create persitent game state
-[ ] Create combat rolls/player state updates
+- [ ] Create monster template
+
+- [ ] Create player templates
+
+- [ ] Create persitent game state
+
+- [ ] Create combat rolls/player state updates
+
 
 ## Create monster
 
