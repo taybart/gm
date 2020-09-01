@@ -1,4 +1,4 @@
-# *G*ame *M*master
+# *G*ame *M*aster
 
 ```sh
 $ gm
