@@ -1,5 +1,14 @@
 # *G*ame *M*aster
 
+## Roll
+
+```sh
+$ gm roll d20
+1492-04-01 00:00:00 [INFO] You rolled 20
+```
+
+## REPL
+
 ```sh
 $ gm
 -> r d20
