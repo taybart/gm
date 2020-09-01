@@ -3,7 +3,7 @@
 ## Roll
 
 ```sh
-$ gm roll d20
+$ gm -r d20
 1492-04-01 00:00:00 [INFO] You rolled 20
 ```
 
