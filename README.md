@@ -1,5 +1,7 @@
 # *G*ame *M*aster
 
+Like a text adventure but with other people (i know MUD's exist, this is IRL people)
+
 ## Roll
 
 ```sh
@@ -24,26 +26,19 @@ $ gm
 
 # v2
 
-## Dice
+## Goals
 
-gm roll d20
+[ ] Create monster template
+[ ] Create player templates
+[ ] Create persitent game state
+[ ] Create combat rolls/player state updates
 
 ## Create monster
 
-gm monster -h 100 -name mon1
-
-gm mon -f goblin.json
+`$ gm monster -h 100 -name mon1 -t ./mon1.template`
 
 ## Create conflict
 
-gm scene init -f player1.json -f player2.json -monsters ./scene2
+`$ gm scene init -f player1.json -f player2.json -monsters ./scene2`
 
-gm attack -to monster1 -from gandalf
-
-## cli vs web interface
-
-gm.handlers.roll(20) // cli
-
--- or --
-
-gm.client.handlers.roll.call(20) // web interface
+`$ gm attack -from coat -to wind -attack ./attacks/notw.attack`
