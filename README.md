@@ -1,3 +1,20 @@
+# *G*ame *M*master
+
+```sh
+$ gm
+-> r d20
+1492-04-01 00:00:00 [INFO] You rolled 1
+-> r d6
+1492-04-01 00:00:00 [INFO] You rolled 2
+-> q
+```
+
+
+
+
+
+# v2
+
 ## Dice
 
 gm roll d20
