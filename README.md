@@ -1,4 +1,4 @@
-# *G*ame *M*aster
+# GM (Game Master) a tool for crawling dungeons
 
 Like a text adventure but with other people (i know MUD's exist, this is IRL people)
 
