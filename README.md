@@ -6,7 +6,7 @@ Like a text adventure but with other people (i know MUD's exist, this is IRL peo
 
 ```sh
 $ gm -r d20
-1492-04-01 00:00:00 [INFO] You rolled 20
+0001-04-01 00:00:00 [INFO] You rolled 20
 ```
 
 ## REPL
@@ -14,9 +14,9 @@ $ gm -r d20
 ```sh
 $ gm
 -> r d20
-1492-04-01 00:00:00 [INFO] You rolled 1
+0001-04-01 00:00:00 [INFO] You rolled 1
 -> r d6
-1492-04-01 00:00:00 [INFO] You rolled 2
+0001-04-01 00:00:00 [INFO] You rolled 2
 -> q
 ```
 
