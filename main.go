@@ -2,39 +2,41 @@ package main
 
 import (
 	"flag"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 
-	"github.com/taybart/gm/dice"
+	"github.com/taybart/gm/bag"
 	"github.com/taybart/log"
 	"golang.org/x/crypto/ssh/terminal"
 )
 
+
 type config struct {
 	reset  bool
 	roll   string
-	player string
 }
 
 var c config
 
 func init() {
 	flag.StringVar(&c.roll, "r", "", "Roll a die [d4, d6, d12, d18, d20]")
-	flag.StringVar(&c.player, "p", "", "Do player stuff")
 }
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
+
 	flag.Parse()
 	switch {
 	// Dice shit
 	case c.roll != "":
-		res, err := dice.Roll(c.roll)
+		res, err := bag.Roll(c.roll)
 		if err != nil {
 			log.Error(err)
 		} else {
 			log.Info("You rolled", res)
 		}
-	case c.player != "":
 	default:
 		dorepl()
 	}
@@ -86,13 +88,17 @@ func parseCmd(cmd string) bool {
 
 	switch cmd {
 	case "r", "roll":
-		res, err := dice.Roll(args[0])
+    d := bag.DefaultDie
+    if len(args) > 0 {
+      d = args[0]
+    }
+		res, err := bag.Roll(d)
 		if err != nil {
 			log.Error(err)
 		} else {
 			log.Info("You rolled", res)
 		}
-	case "q", "quit":
+	case "q", "quit", "exit":
 		return true
 	}
 	return false

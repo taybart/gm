@@ -1,0 +1,11 @@
+{
+  "type": "player",
+  "hp": 100,
+  "max_hp": 100,
+  "toughness": 10,
+  "dexterity": 5,
+  "strength": 4,
+  "perception": 3,
+  "mind": 2,
+  "charisma": 1
+}
